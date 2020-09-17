@@ -1,0 +1,28 @@
+https://git-scm.com/download/win
+
+https://blog.cosmosfarm.com/archives/248/%EC%9A%B0%EB%B6%84%ED%88%AC-18-04-%EB%8F%84%EC%BB%A4-docker-%EC%84%A4%EC%B9%98-%EB%B0%A9%EB%B2%95/
+    sudo apt update
+    sudo apt install apt-transport-https ca-certificates curl software-properties-common
+    curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+    sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu bionic stable"
+    sudo apt update
+    apt-cache policy docker-ce
+    sudo apt install docker-ce
+    sudo systemctl status docker
+
+https://subicura.com/2017/01/19/docker-guide-for-beginners-2.html
+    docker run ubuntu:16.04
+
+    docker run --rm -it ubuntu:16.04 /bin/bash
+    cat /etc/issue
+    ls
+    
+    docker run -d -p 1234:6379 redis
+    telnet localhost 1234
+    hello
+    world
+    
+    docker run -d -p 3306:3306 -e MYSQL_ALLOW_EMPTY_PASSWORD=true --name mysql mysql:5.7
+    mysql -h127.0.0.1 -uroot
+    mysql> show databases;
+    mysql> quit
